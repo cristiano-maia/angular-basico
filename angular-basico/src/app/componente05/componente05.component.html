@@ -1,0 +1,21 @@
+<ul>
+    <li *ngFor="let n of nomes">{{n}}</li>
+</ul>
+
+<hr>
+
+<ul>
+    <li *ngFor="let v of nomes; index as indice">{{v}} - {{indice}}</li>
+</ul>
+
+
+<table border="1">
+    <tr bgcolor="silver">
+        <th>Nome</th>
+        <th>Índice</th>
+    </tr>
+    <tr *ngFor="let n of nomes; index as indice">
+        <td>{{ n }}</td>
+        <td align="center">{{ indice }}</td>
+    </tr>
+</table>

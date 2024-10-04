@@ -1,0 +1,21 @@
+.fundoVerde{
+    background-color: green;
+    width: 200px;
+    height: 25px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.fundoVerde, 
+.fundoVermelho,
+ li{
+    list-style: none;
+}
+
+.fundoVermelho{
+    width: 200px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: red;
+
+}
