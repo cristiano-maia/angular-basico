@@ -8,11 +8,13 @@ import { Componente05Component } from "./componente05/componente05.component";
 import { Componente06Component } from "./componente06/componente06.component";
 import { Componente07Component } from "./componente07/componente07.component";
 import { Componente08Component } from "./componente08/componente08.component";
+import { Componente09Component } from "./componente09/componente09.component";
+import { Componente10Component } from "./componente10/componente10.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Componente01Component, Componente02Component, Componente03Component, Componente04Component, Componente05Component, Componente06Component, Componente07Component, Componente08Component],
+  imports: [RouterOutlet, Componente01Component, Componente02Component, Componente03Component, Componente04Component, Componente05Component, Componente06Component, Componente07Component, Componente08Component, Componente09Component, Componente10Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

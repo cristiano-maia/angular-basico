@@ -14,4 +14,10 @@ export class Componente08Component {
 
   media:number = 8;
 
+  // Vetor de nomes
+  nomes:string[] = ['Cristiano','Amanda','Davi','Noah'];
+
+  // linguagem
+  linguagem:string= 'HTML';
+
 }
