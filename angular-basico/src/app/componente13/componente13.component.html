@@ -1,11 +1,13 @@
-<form>
-    <input type="number" class="form-control" readonly>
-    <input type="text" class="form-control" placeholder="Nome">
-    <input type="number" class="form-control" placeholder="Valor">
+<form [formGroup]="formulario"> 
+    <input type="number" class="form-control" formControlName="id" readonly>
+    <input type="text" class="form-control"   formControlName="nome"  placeholder="Nome">
+    <input type="number" class="form-control" formControlName="valor"  placeholder="Valor">
 
-    <input type="button" class="btn btn-primary" value="Cadastrar">
-    <input type="button" class="btn btn-primary" value="Alterar">
-    <input type="button" class="btn btn-primary" value="Remover">
+    <!-- Quando o botao de cadastrar for verdadeiro, apenas o botao de cadastro fica visivel -->
+    <!-- Quando ocorrer o contrario os botão de cadastro ficará oculto e os demais visiveis -->
+    <input type="button" class="btn btn-primary" value="Cadastrar"  *ngIf="btnCadastrar" (click)="cadastrar()">
+    <input type="button" class="btn btn-primary" value="Alterar"    *ngIf="!btnCadastrar" (click)="alterar()">
+    <input type="button" class="btn btn-primary" value="Remover"    *ngIf="!btnCadastrar" (click)="remover()">
 </form>
 
 <table class="table table-striped">
@@ -19,11 +21,11 @@
     </thead>
 
     <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr  *ngFor="let v of vetor; let indice = index">
+            <td>{{ indice + 1 }}</td>
+            <td>{{ v.nome }}</td>
+            <td>{{ v.valor }}</td>
+            <td><button class="btn btn-primary" (click)="selecionarProduto(indice)">Selecionar</button></td>
         </tr>
     </tbody>
 
